@@ -1,0 +1,74 @@
+
+.product{
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+}
+.filter-bar{
+    height: 100vh;
+    background-color: black;
+    color: antiquewhite;
+    padding: 2rem;
+}
+.filter-bar__heading{
+    font-size: 2rem;
+}
+.filter-bar ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+.product-list ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3rem;
+}
+.product-list ul li{
+    list-style: none;
+/*    height: 300px;*/
+    width: 80%;
+/*    background-color: #ffdabb;*/
+    border: 2px solid black;
+    margin: 2rem auto;
+    padding: 2rem;
+
+}
+.product-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-card{
+    padding: 2rem;
+    height: 100%;
+/*    width: 100%;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+/*    background-color: red;*/
+/*    margin: 1rem auto;*/
+}
+
+.product-card .p-card__image{
+    width: 100%;
+}
+.product-card .p-card__image img{
+    width: 100%;
+}
+.product-card .p-card__name{
+    font-size: 2rem;
+}
+.product-card .p-card__description{
+    font-size: 1.2rem;
+}
+.product-card .p-card__price{
+    font-size: 2.2rem;
+    font-weight:600;
+}

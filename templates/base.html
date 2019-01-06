@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+<!--    css-->
+    <link rel="stylesheet" href="{% static "css/base.css"%}">
+<!--    font-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,900" rel="stylesheet">
+<!--    js-->
+    <script src="{% static "js/jquery-3.3.1.slim.min.js"%}"> </script>
+
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <div class="g-top-bar">
+
+        <div class="g-top-bar__panel">
+            <span><img src="{% static "image/phone-svg.svg"%}" alt=""> +91-9897XXXX53</span>
+            <span>Locate Store</span>
+
+
+            <span><a href="#" id='login-btn'>Log In</a></span>
+            <span><a href="#">Sign Up</a></span>
+<!--    login pop-up window-->
+
+
+
+
+<!--            <span><a href="#">Log Out</a></span>-->
+        </div>
+    </div>
+    <div class="g-nav">
+        <div class="g-nav--logo">
+            <img src="{% static "image/logo.jpg"%}" alt="Logo">
+        </div>
+        <div class="g-nav--search">
+            <div class="search_box">
+
+                <input type="text" name="search_bar" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+<div style="font-size: 1.3rem; text-decoration: none!important; color: black;">
+
+       <a style="text-decoration: none" href="/product/">
+           View all products
+       </a>
+       <br>
+       <a style="text-decoration: none" href="/product/add">
+           Add new product
+       </a>
+        {% block content %}
+         {% endblock %}
+</div>
+</body>
+</html>
+

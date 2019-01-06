@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+   {% block content %}
+
+   {% load static %}
+    <link rel="stylesheet" href="{% static "css/all_product.css"%}">
+
+    <section class="product">
+       <div class="product-left">
+        <div class="filter-bar">
+           <div class="filter-bar__heading">
+               Filter By:
+           </div>
+            <ul>
+                <li>Price</li>
+                <li>Quality</li>
+                <li>Weight</li>
+            </ul>
+        </div>
+
+       </div>
+        <div class="product-right">
+
+            <div class="product-list">
+               <ul>
+                  {% for product in products %}
+
+                   <li>
+                       <a href="{{product.get_absolute_url}}">
+                           <div class="product-card">
+                                <div class="p-card__image">
+
+                                    <img src="{{product.image.url}}" alt="">
+                                </div>
+                                <div class="p-card__detail">
+                                <div class="p-card__name">
+                                     {{product.name}}
+                                </div>
+                                <div class="p-card__description">
+                                    {{product.description}}
+                                </div>
+                                <div class="p-card__price">
+                                    Rs. {{product.price}}
+                                </div>
+                                </div>
+<!--                                {{product.material}}-->
+                            </div>
+                       </a>
+                   </li>
+               {% endfor %}
+
+               </ul>
+            </div>
+        </div>
+    </section>
+  {%endblock%}
